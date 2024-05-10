@@ -12,6 +12,7 @@ function myButtonClicked() {
   const originalNumber = document.getElementById("first-number").innerHTML
   const subtractedNumber = document.getElementById("second-number").innerHTML
   let answerNumber = originalNumber - subtractedNumber
+  let counter = 0
 
   //process
   while (answerNumber < subtractedNumber) {
