@@ -9,11 +9,12 @@
 function myButtonClicked() {
 
   //input
-  const dayOfWeek = document.getElementById("day-of-week").innerHTML
-  const personAge = document.getElementById("person-age").innerHTML
+  const originalNumber = document.getElementById("first-number").innerHTML
+  const subtractedNumber = document.getElementById("second-number").innerHTML
+  let answerNumber = originalNumber - subtractedNumber
 
   //process
-  while {
+  while (answerNumber < subtractedNumber) {
 
   }
 }
