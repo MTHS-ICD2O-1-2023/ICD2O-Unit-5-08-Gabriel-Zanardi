@@ -9,13 +9,17 @@
 function myButtonClicked() {
 
   //input
-  const originalNumber = document.getElementById("first-number").innerHTML
-  const subtractedNumber = document.getElementById("second-number").innerHTML
+  const firstNumber = document.getElementById("first-number").innerHTML
+  const lastNumber = document.getElementById("second-number").innerHTML
   let answerNumber = originalNumber - subtractedNumber
   let counter = 0
+  let remainder = 0
 
   //process
-  while (answerNumber < subtractedNumber) {
-
+  while (firstNumber - lastNumber) {
+    if (answerNumber < firstNumber) {
+        counter += 1
+        remainder = firstNumber - lastNumber
+    }
   }
 }
