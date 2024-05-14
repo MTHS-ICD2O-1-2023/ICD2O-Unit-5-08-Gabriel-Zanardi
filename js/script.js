@@ -7,19 +7,29 @@
 "use strict"
 
 function myButtonClicked() {
-
-  //input
-  const firstNumber = document.getElementById("first-number").innerHTML
-  const lastNumber = document.getElementById("second-number").innerHTML
-  let answerNumber = originalNumber - subtractedNumber
+  // Input
+  const firstNumber = parseInt(document.getElementById("first-number").value)
+  const lastNumber = parseInt(document.getElementById("second-number").value)
   let counter = 0
-  let remainder = 0
+  let remainder = firstNumber // Initialize remainder with firstNumber
+  let operationLines = "" // Variable to store the operation lines
 
-  //process
-  while (firstNumber - lastNumber) {
-    if (answerNumber < firstNumber) {
-        counter += 1
-        remainder = firstNumber - lastNumber
+  // Process
+  while (remainder >= lastNumber) {
+    // Perform subtraction
+    remainder -= lastNumber
+    counter += 1
+
+    // Concatenate the operation line
+    operationLines += `${firstNumber} - ${lastNumber} = ${remainder}<br>`
+
+    if (remainder < lastNumber) {
+      break
     }
   }
+
+  // Output
+  const quotient = counter;
+  const operationLines = operationLines
+  document.getElementById("final-answer").innerHTML = "Therefore" + firstNumber + "/" + lastNumber + "=" + quotient + "R" + remainder
 }
